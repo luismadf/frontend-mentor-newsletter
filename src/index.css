@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tomato: #ff6257;
+  --dark-slate-grey: #242742;
+  --charcoal-grey: #36384e;
+  --grey: #9294a0;
+  --font-family: "Roboto", sans-serif;
+  --font-size: 16px;
+  --spacer: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--charcoal-grey);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--charcoal-grey);
+}
+
+li {
+  display: flex;
+  margin-bottom: var(--spacer);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+li::before {
+  content: url("/assets/images/icon-list.svg");
+  margin-right: calc(var(--spacer) * 1.5);
+}
+
+.error-tag {
+  display: none;
+}
+
+fieldset:invalid .error-tag {
+  display: inline-block;
+}
